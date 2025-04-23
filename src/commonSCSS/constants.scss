@@ -1,0 +1,23 @@
+@use "sass:color";
+
+//--------------------------------------//
+$grey-1: rgba(134, 134, 134, 1);
+$grey-2: rgb(80 80 80);
+$grey-3: rgb(200 200 200);
+
+$graphite-1: rgb(34, 34, 34);
+$graphite-2: rgb(15, 15, 15);
+
+$steel-blue: rgb(20, 34, 47);
+$steel-blue-light: rgb(24, 109, 123);
+$steel-blue-light-text: rgb(110 184 196);
+$steel-blue-light-darker: rgb(33, 150, 243);
+$text-bright: rgb(103, 196, 91);
+$background-color: rgb(10, 11, 10);
+$background-color-light: rgba(0, 0, 0, 0.1);
+$text-color: rgb(235, 235, 235);
+$white: #ffffff;
+$container-color: rgba(white, 0.1);
+
+$text-shade: color.adjust($text-color, $lightness: -7%);
+$text-faded: color.adjust($text-shade, $lightness: -20%);

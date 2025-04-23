@@ -1,0 +1,134 @@
+@use "../../../commonSCSS/constants.scss";
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px 24px;
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.03);
+}
+
+.game-title {
+  font-family: "Russo One", sans-serif;
+  font-size: 2.2rem;
+  color: constants.$steel-blue-light-darker;
+  text-align: center;
+  margin-bottom: 8px;
+  letter-spacing: 1.5px;
+}
+
+.grid-size-select {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  color: constants.$text-color;
+  background-color: constants.$container-color;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1px solid constants.$grey-3;
+  width: fit-content;
+  width: 100%;
+  justify-content: space-around;
+
+  select {
+    font-size: 1rem;
+    background-color: constants.$white;
+    border: 1px solid constants.$grey-3;
+    padding: 6px 10px;
+    border-radius: 8px;
+    outline: none;
+    color: constants.$graphite-2;
+    font-family: inherit;
+
+    &:focus {
+      border-color: constants.$steel-blue-light-darker;
+      box-shadow: 0 0 0 4px rgba(33, 150, 243, 0.2);
+    }
+  }
+}
+
+.buttons-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+
+  button {
+    padding: 10px 16px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 12px;
+    background-color: constants.$steel-blue-light-darker;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: inherit;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: constants.$steel-blue-light-darker;
+      opacity: 0.9;
+    }
+  }
+}
+
+.game-stats {
+  text-align: center;
+  font-weight: bold;
+  color: constants.$text-color;
+  font-size: 1rem;
+  background-color: constants.$container-color;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid constants.$grey-3;
+}
+
+.modal-placeholder {
+  text-align: center;
+  font-style: italic;
+  color: constants.$grey-3;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .game-container {
+    padding: 16px;
+    gap: 20px;
+  }
+
+  .game-title {
+    font-size: 1.8rem;
+  }
+
+  .grid-size-select {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    font-size: 1rem;
+
+    select {
+      width: 100%;
+    }
+  }
+
+  .buttons-row {
+    flex-direction: column;
+    gap: 10px;
+
+    button {
+      width: 100%;
+      font-size: 1rem;
+      padding: 10px;
+    }
+  }
+
+  .game-stats {
+    font-size: 0.95rem;
+    padding: 8px;
+  }
+}

@@ -1,0 +1,107 @@
+@use "../../../commonSCSS/constants.scss";
+
+.player-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.player-card {
+  background-color: constants.$graphite-1;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid constants.$steel-blue-light;
+  color: constants.$text-color;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 10px rgba(110, 184, 196, 0.2);
+  }
+}
+
+.player-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: constants.$steel-blue-light-text;
+  cursor: pointer;
+  display: inline-block;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.player-symbol,
+.player-wins {
+  font-size: 0.95rem;
+  color: constants.$text-faded;
+  padding-left: 4px;
+}
+
+.current-turn {
+  color: constants.$text-bright;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 4px;
+  display: inline-block;
+}
+
+.player-name-input {
+  width: 100%;
+  font-size: 1.1rem;
+  padding: 8px 12px;
+  border: 2px solid constants.$steel-blue-light;
+  border-radius: 10px;
+  background-color: constants.$background-color-light;
+  color: constants.$text-color;
+  outline: none;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+  &:focus {
+    border-color: constants.$steel-blue-light-darker;
+    box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.3);
+    background-color: constants.$graphite-2;
+  }
+
+  &::placeholder {
+    color: constants.$grey-1;
+  }
+}
+@media (max-width: 768px) {
+  .player-info-container {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .player-card {
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .player-name-input {
+    font-size: 1.2rem;
+    padding: 10px 14px;
+    border-radius: 12px;
+  }
+
+  .player-title {
+    font-size: 1.4rem;
+  }
+
+  .player-symbol,
+  .player-wins {
+    font-size: 1.05rem;
+  }
+
+  .current-turn {
+    font-size: 1.2rem;
+    margin-top: 8px;
+  }
+}
